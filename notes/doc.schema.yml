@@ -1,0 +1,11 @@
+version: 1
+schemas:
+  - id: doc
+    title: doc
+    parent: root
+    children:
+      - pattern: '*'
+        desc: 'Standard template for documentation.'
+        template: 
+          id: templates.doc
+          type: note
