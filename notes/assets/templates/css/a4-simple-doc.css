@@ -1,0 +1,240 @@
+/* ================================
+   Font Styles
+================================ */
+
+@font-face {
+    font-family: Noto Sans;
+    font-weight: 400;
+    src: url(../fonts/NotoSans-Regular.ttf);
+  }
+   @font-face {
+    font-family: Noto Sans;
+    font-style: italic;
+    font-weight: 400;
+    src: url(../fonts/NotoSans-Italic.ttf);
+  }
+  @font-face {
+    font-family: Noto Sans;
+    font-weight: 300;
+    src: url(../fonts/NotoSans-Light.ttf);
+  }
+  @font-face {
+    font-family: Noto Sans;
+    font-style: italic;
+    font-weight: 300;
+    src: url(../fonts/NotoSans-LightItalic.ttf);
+  }
+  @font-face {
+    font-family: Noto Sans;
+    font-weight: 700;
+    src: url(../fonts/NotoSans-Bold.ttf);
+  }
+  @font-face {
+    font-family: Noto Sans Mono;
+    font-weight: 400;
+    src: url(../fonts/NotoSansMono-Regular.ttf);
+  }
+  
+  /* ================================
+     Page Styles
+  ================================ */
+  
+  @media print {
+    @page {
+      size: A4;
+      margin: 2.5cm 1.5cm 2.5cm 1.5cm;
+      @top-left {
+        content: "Documentation";
+        font-size: 9pt;
+        font-weight: bold;
+        height: 1cm;
+        text-align: left;
+        width: 10cm;
+      }
+      @top-center {
+        background: #7B7D6A;
+        content: '';
+        display: block;
+        height: .05cm;
+        opacity: .5;
+        width: 100%;
+      }
+      @top-right {
+        content: string(heading);
+        font-size: 9pt;
+        height: 1cm;
+        vertical-align: middle;
+        width: 100%;
+      }
+      @bottom-left {
+          content: "Technical documentation.";
+          font-size: 9pt;
+          height: 1cm;
+          text-align: left;
+          width: 9cm;
+      }
+      @bottom-center {
+          background: #7B7D6A;
+          content: '';
+          display: block;
+          height: .05cm;
+          opacity: .5;
+          width: 100%;
+        }
+      @bottom-right {
+          font-size: 9pt;
+          content: counter(page);
+          height: 1cm;
+          text-align: right;
+          width: 0.5cm;
+      }
+    }
+  }
+
+  @page :first {
+    background-size: cover;
+    margin: 0;
+  }
+  
+  /* ================================
+     HTML Classes
+  ================================ */
+    
+  html {
+    color: #393939;
+    font-family: Noto Sans;
+    font-size: 11pt;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+    
+  h1 {
+    color: #7B7D6A;
+    font-size: 38pt;
+    margin: 5cm 2cm 0 2cm;
+    width: 100%;
+  }
+  h2, h3, h4 {
+    color: black;
+    font-weight: 400;
+  }
+  h2 {
+    break-before: always;
+    font-size: 20pt;
+    string-set: heading content();
+  }
+  h3 {
+    font-weight: 300;
+    font-size: 15pt;
+  }
+  h4 {
+    font-size: 13pt;
+  }
+  
+  /* Stil für Inline-Code */
+  code {
+  background-color: #f2f2f2; /* Grauer Hintergrund */
+  color: red; /* Roter Text */
+  padding: 2px 4px; /* Innenabstand */
+  font-family: Noto Sans Mono; /* Monospace-Schriftart für Code */
+  font-size: 8pt;
+}
+
+
+/* Allgemeine Tabellenformatierung */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Tabellenrahmen und Zellenformatierung */
+table, th, td {
+  border: 1px solid #000; /* Schwarzer Rahmen */
+}
+
+/* Tabellenüberschriftenformatierung */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  font-weight: bold;
+  border: 1px solid #000; /* Schwarzer Rahmen */
+}
+
+/* Zeilen abwechselnd einfärben (optional) */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Zelleninhalt formatieren */
+td {
+  padding: 8px;
+  border: 1px solid #000; /* Schwarzer Rahmen */
+}
+
+/* Rechtsausrichtung für numerische Spalten (z. B. Tabellen mit Zahlen) */
+td.text-right {
+  text-align: right;
+}
+
+/* Zentrierte Ausrichtung für spezielle Spalten (z. B. Datum) */
+td.text-center {
+  text-align: center;
+}
+
+/* Kursive Schrift für spezielle Spalten (z. B. Kommentare) */
+td.italic {
+  font-style: italic;
+}
+
+/* Abstand zwischen Text und Tabellenzellen */
+td, th {
+  padding: 6px 8px;
+}
+
+/* Zeilenhöhe */
+td, th {
+  line-height: 1.4;
+}
+  
+  /* ================================
+     Custom Classes
+  ================================ */
+  
+  .sourceCode {
+    background: #393939;
+    color: aliceblue;
+    font-family: Noto Sans Mono;
+    font-weight: 400;
+    margin-top: 5pt;
+    padding-left: 2pt;
+    padding-right: 2pt;
+
+  }
+  
+  .sourceCode pre {
+    white-space: pre-wrap; /* Allow line breaks within words */
+    word-wrap: break-word; /* Break words when they reach the container edge */
+    font-size: 8pt; /* Adjust font size as needed */
+  }
+
+  #cover {
+    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    height: 280mm;
+  }
+  #cover address {
+    flex: 1 50%;
+    margin: 0 -2cm;
+    padding: 1cm 0;
+    white-space: pre-wrap;
+  }
+  #cover address:first-of-type {
+    padding-left: 3cm;
+  }
+  
+  /* ================================
+     End of Styles
+  ================================ */
