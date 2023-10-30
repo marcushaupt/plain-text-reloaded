@@ -7,7 +7,7 @@ commands:
         note:
             selectionMode: extract
             confirmVaultOnCreate: true
-            vaultSelectionModeOnCreate: smart
+            vaultSelectionModeOnCreate: alwaysPrompt
             leaveTrace: false
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
@@ -19,7 +19,7 @@ commands:
         enableMarker: false
     copyNoteLink:
         aliasMode: title
-    templateHierarchy: template
+    templateHierarchy: templates
 workspace:
     vaults:
         -
@@ -81,6 +81,7 @@ preview:
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
+    theme: light
 publishing:
     enableFMTitle: true
     enableNoteTitleForLink: true
