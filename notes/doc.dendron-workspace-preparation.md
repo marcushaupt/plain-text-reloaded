@@ -2,7 +2,7 @@
 id: 4agl47een0xc6ufny8txqxe
 title: Dendron Workspace Preparation
 desc: First steps to setup Dendron workspace for a productive environment
-updated: 1698758915512
+updated: 1698759116639
 created: 1698749115909
 author: Marcus Haupt
 mail: marcus@haupt.contact
