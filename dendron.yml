@@ -23,9 +23,25 @@ commands:
 workspace:
     vaults:
         -
+            fsPath: dependencies/github.com/dendronhq/handbook
+            remote:
+                type: git
+                url: git@github.com:dendronhq/handbook.git
+            selfContained: true
+            name: handbook
+        -
+            fsPath: dependencies/github.com/marcushaupt/plain-text-templates
+            remote:
+                type: git
+                url: git@github.com:marcushaupt/plain-text-templates.git
+            name: plain-text-templates
+        -
             fsPath: .
             selfContained: true
             name: plain-text-reloaded
+            remote:
+                type: git
+                url: https://github.com/marcushaupt/plain-text-reloaded.git
     journal:
         dailyDomain: daily
         name: journal
@@ -107,3 +123,9 @@ publishing:
     enableTaskNotes: true
     enablePrettyLinks: true
     searchMode: search
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - plain-text-templates
+            - plain-text-reloaded
+            - handbook
