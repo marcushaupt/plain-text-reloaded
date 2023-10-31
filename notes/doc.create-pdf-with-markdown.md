@@ -1,12 +1,12 @@
 ---
 id: 8irek96wmd26bkdu1enwsbn
 title: Create PDF with Markdown
-author: Marcus Haupt
-mail: marcus@haupt.contact
-website: https://marcus.haupt.contact
-desc: 'How to create beautiful PDFs from markdown files using Pandoc and Weasyprint.'
+desc: How to create beautiful PDFs from markdown files using Pandoc and Weasyprint.
 updated: 1698397928759
 created: 1695198196652
+author: Marcus Haupt
+mail: marcus@haupt.contact
+website: 'https://marcus.haupt.contact'
 ---
 ## About this documentation
 
